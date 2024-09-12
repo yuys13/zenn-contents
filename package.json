@@ -17,6 +17,7 @@
         "textlint-rule-preset-ja-technical-writing": "^10.0.1"
     },
     "scripts": {
-        "new": "zenn new:article --emoji 🚗"
+        "new": "zenn new:article --emoji 🚗",
+        "preview": "zenn preview"
     }
 }
