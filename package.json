@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "new": "zenn new:article --emoji 🚗",
+        "preview": "zenn preview"
     },
     "keywords": [],
     "author": "",
@@ -13,11 +14,10 @@
         "zenn-cli": "^0.1.157"
     },
     "devDependencies": {
+        "markdownlint-cli": "^0.42.0",
+        "prettier": "^3.3.3",
         "textlint": "^14.2.0",
+        "textlint-filter-rule-comments": "^1.2.2",
         "textlint-rule-preset-ja-technical-writing": "^10.0.1"
-    },
-    "scripts": {
-        "new": "zenn new:article --emoji 🚗",
-        "preview": "zenn preview"
     }
 }

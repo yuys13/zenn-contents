@@ -8,10 +8,14 @@ published_at: 2024-10-02
 publication_name: vim_jp
 ---
 
+<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
+
 :::message
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2024年10月2日の記事です。
 前回はthincaさんによる[Meguro.vim #25 を開催しました](https://thinca.hatenablog.com/entry/2024/09/megurovim-25)でした。
 :::
+
+<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
 
 # はじめに
 
