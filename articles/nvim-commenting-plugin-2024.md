@@ -8,10 +8,14 @@ published_at: 2024-09-16
 publication_name: vim_jp
 ---
 
+<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
+
 :::message
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2024年9月16日の記事です。
 前回はkawarimidollさんによる[Vimで使っている簡単キーマッピングたちを共有](https://zenn.dev/vim_jp/articles/43d021f461f3a4)でした。
 :::
+
+<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
 
 # コメンティングプラグインとは
 
@@ -42,9 +46,15 @@ publication_name: vim_jp
 
 https://github.com/yuys13/dotfiles/blob/7f414819fac660641f1e7ebd8c2b7d31f38c7e56/home/XDG_CONFIG_HOME/nvim/lua/rc/plugins/nvim-treesitter.lua#L130-L151
 
+<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
+<!-- textlint-disable ja-technical-writing/sentence-length -->
+
 :::details 私の設定の補足
-私はlazyのsetup時に`defaults = { lazy = true }`を指定しているため、nvim-ts-context-commentstringは`lazy = true`です。
+私はlazyのsetup時に`defaults = { lazy = true }`を指定しているため、 nvim-ts-context-commentstringは`lazy = true`です。
 :::
+
+<!-- textlint-enable ja-technical-writing/sentence-length -->
+<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
 
 # コメンティングプラグインの選び方
 
@@ -64,4 +74,3 @@ ts-comments.nvimは`vim.filetype.get_option`という関数を上書きするこ
 このプラグインが真価を発揮するのはautocmdを無効化してコメンティングプラグインと組み合わせた時です。
 様々なコメンティングプラグインに対する連携機能が用意されており、コメンティングプラグインの豊富な機能と文脈によるcommentstringの変更を両立します。
 Neovim組込みのコメント機能との連携方法も記載されていますが、ts-comments.nvimの一部を自分で実装するのと同義なので、ts-comments.nvimを使う方が良いでしょう。
-
