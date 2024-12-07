@@ -27,5 +27,6 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci
-    - run: npx textlint '**/**.md'
-    - run: npx markdownlint '**/**.md' -i node_modules
+    - run: npx textlint '**/*.md'
+    - run: npx markdownlint '**/*.md' -i node_modules
+    - run: npx prettier --check '**/*.md'
