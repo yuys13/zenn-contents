@@ -12,9 +12,7 @@ publication_name: vim_jp
 
 :::message
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2024年12月13日の記事です。
-
-<!-- 前回はtositadaさんによる[neovimプラグインの作成 lua]()でした。 -->
-
+前回はtositadaさんによる[neovimプラグインの作成 lua](https://zenn.dev/vim_jp/articles/dbafe015ce9a4e)でした。
 :::
 
 <!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
