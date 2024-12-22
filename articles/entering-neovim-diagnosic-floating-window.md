@@ -22,7 +22,8 @@ NeovimのDiagnosticはLanguage Serverの診断情報等を表示してくれる�
 [none-ls](https://github.com/nvimtools/none-ls.nvim)や[nvim-lint](https://github.com/mfussenegger/nvim-lint)を使ってlinterの結果を表示している人も多いでしょう。
 そんな人達向けのTipsを紹介します。
 
-この記事はNeovim v0.10.2時点で動作確認をしています。
+この記事のスクリーンショットはNeovim v0.10.2です。
+Neovim v0.10.3でも同様に使える事を確認しています。
 
 # 入り方
 
@@ -80,7 +81,6 @@ Code Actionで無効化できると楽ですが、Code Actionが提供されて�
 vim.diagnostic.config {
   severity_sort = true,
   float = {
-    -- source = 'if_many',
     border = 'single',
     title = 'Diagnostics',
     header = {},
