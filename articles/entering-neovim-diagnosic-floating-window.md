@@ -11,8 +11,7 @@ publication_name: vim_jp
 :::message
 
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2025年1月3日の記事です。
-
-<!-- 前回はKlehaさんによる[NeoVimで書き初め(という名の書類作成)をする]()でした。 -->
+前回はKlehaさんによる[NeoVimで書き初め(という名の書類作成)をする](https://zenn.dev/haru_0205/books/d8b9cd0cf37db9)でした。
 
 :::
 
