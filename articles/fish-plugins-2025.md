@@ -60,7 +60,7 @@ https://github.com/yuys13/fish-ghq-fzf
 
 https://github.com/decors/fish-ghq
 
-## `$fish_user_paths`を$EDITORで編集する
+## `$fish_user_paths`を`$EDITOR`で編集する
 
 fishインストール直後しか使わないけど、お気に入りプラグイン。
 
