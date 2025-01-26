@@ -60,7 +60,7 @@ https://github.com/yuys13/fish-ghq-fzf
 
 https://github.com/decors/fish-ghq
 
-## `$fish_user_paths`を$EDITORで編集する
+## `$fish_user_paths`を`$EDITOR`で編集する
 
 fishインストール直後しか使わないけど、お気に入りプラグイン。
 
@@ -168,6 +168,16 @@ https://github.com/yuys13/fish-fzf
 command -q fzf
 and fzf --fish | source
 ```
+
+以前は↓を使ってました。使いはじめた頃、fzf側にfishのintegrationは無かった気がします。
+
+https://github.com/jethrokuan/fzf
+
+色々ついてるけど持て余しているのでfzf本体の機能を使う事にしました。
+
+最近は↓の方が更新されていてスターも多いです(使った事はない)。
+
+https://github.com/PatrickF1/fzf.fish
 
 ## プロンプト
 
