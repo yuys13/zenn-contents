@@ -14,7 +14,7 @@
         "zenn-cli": "^0.1.158"
     },
     "devDependencies": {
-        "markdownlint-cli": "^0.43.0",
+        "markdownlint-cli": "^0.44.0",
         "prettier": "^3.4.2",
         "textlint": "^14.4.2",
         "textlint-filter-rule-comments": "^1.2.2",
