@@ -17,6 +17,12 @@ fishの設定をしたので情報共有します。
 
 https://github.com/jorgebucaran/fisher
 
+:::message
+
+(2025年2月1日更新)記載していなかったzsh実装を追加しました。
+
+:::
+
 # プラグイン紹介
 
 ## `cd`したら自動で`ls`する
@@ -36,7 +42,7 @@ set -U autols_cmd eza
 
 zshだとこんな感じに設定した内容を実現するプラグインです。
 
-```zsh
+```sh
 __list_directory_contents () {
     if [[ -o interactive ]]; then
         ls
@@ -59,6 +65,33 @@ https://github.com/yuys13/fish-ghq-fzf
 元々以下を使っていたのですが、autolsの描画とpromptの描画が干渉してしまうので、必要な部分のみ自作することにしました。
 
 https://github.com/decors/fish-ghq
+
+:::details zshでの実現方法。
+
+以下のzsh実装の移植です。
+
+```sh
+ghq_fzf () {
+    local selected_repo=$(ghq list -p | FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} ${FZF_ALT_C_OPTS}" fzf)
+    if [[ -z $selected_repo ]]; then
+        zle redisplay
+        return 0
+    fi
+
+    BUFFER="cd ${selected_repo}"
+    zle accept-line
+
+    zle reset-prompt
+}
+
+zle -N ghq_fzf
+bindkey "^g" ghq_fzf
+```
+
+autolsを綺麗に表示するために、commandlineにcdする文字列を表示させて実行しています。
+気付いたらfishもzshと同じことをしていました。
+
+:::
 
 ## `$fish_user_paths`を`$EDITOR`で編集する
 
@@ -85,7 +118,7 @@ https://github.com/yuys13/fish-cdf
 
 組込みでディレクトリを記録する機能がある。
 
-```zsh
+```sh
 autoload -Uz chpwd_recent_dirs cdr
 add-zsh-hook chpwd chpwd_recent_dirs
 zstyle ':chpwd:*' recent-dirs-default true
@@ -101,7 +134,7 @@ zstyle ':completion:*:*:cdr:*:*' recent-dirs-insert both
 (番号も一緒で出てくるので`cdr`にその番号渡しても良い)
 ↓な感じ。
 
-```zsh
+```sh
 function cdf () {
     clean-chpwd-recent-dirs
     local dir=($(cdr -l | fzf --preview 'f() { sh -c "$FZF_CDR_PREVIEW_OPTS ${@}" }; f {2..}'))
@@ -113,7 +146,7 @@ function cdf () {
 
 ちなみに履歴を綺麗にする関数として以下を用意しているが、ちょっと何やってるかわからない。
 
-```zsh
+```sh
 clean-chpwd-recent-dirs () {
     emulate -L zsh
     setopt extendedglob
@@ -146,6 +179,32 @@ https://github.com/yuys13/fish-fzf-bd
 
 https://github.com/0rax/fish-bd
 
+:::details zshでの実現方法。
+
+元になったzsh実装は以下です。
+
+```sh
+function bd_list () {
+    local dir=$PWD
+    for i in {1..20}; do
+        dir=$(dirname "$dir")
+        echo "$dir"
+        if [[ $dir = "/" ]]; then
+            break
+        fi
+    done
+}
+
+function bd () {
+    local dir=$(bd_list | FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS} ${FZF_ALT_C_OPTS}" fzf)
+    if [[ -n $dir ]]; then
+        builtin cd $dir
+    fi
+}
+```
+
+:::
+
 ## `git`のリポジトリルートに`cd`
 
 うん、「また」なんだ。済まない。
@@ -153,6 +212,21 @@ https://github.com/0rax/fish-bd
 基本的にはリポジトリルートから動かざること山の如しなのですが、稀に使います。
 
 https://github.com/yuys13/fish-gcd
+
+:::details zshでの実現方法。
+
+zsh実装は以下。
+
+```sh
+gcd () {
+    local dir=$(git rev-parse --show-toplevel)
+    if [[ -n $dir ]]; then
+        builtin cd $dir
+    fi
+}
+```
+
+:::
 
 ## `fzf`のshell連携をする
 
