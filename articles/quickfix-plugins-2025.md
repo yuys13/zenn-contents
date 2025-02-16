@@ -223,3 +223,5 @@ grep結果の妥当性確認の際、実際にジャンプせずに判断でき�
 LSの診断結果の閲覧についても以前から[trouble.nvim](https://github.com/folke/trouble.nvim)を使ってリッチに確認できました。
 今では`vim.diagnostic.setqflist()`と`nvim-bqf`の組み合わせも選択肢に入ると考えています。
 専用プラグインの能力も魅力的ですが、quickfixという共通IFを活用することで、プラグイン毎に操作方法を覚える必要が無いことも、また魅力と感じています。
+他に`vim.lsp.buf.references`もquickfixを使います。telescope.nvimなどに置き換えている人も是非一度quickfix + `nvim-bqf`の使い勝手を試してみて欲しいです。
+referencesは同じ一覧を使って、様々な場所にジャンプするシーンがあります。ファジーファインダーのresume機能を使うより、quickfixでジャンプする方が快適な場面もあるのでお試しあれ。
