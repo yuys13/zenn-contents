@@ -11,6 +11,7 @@ publication_name: vim_jp
 :::message
 
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2025年2月19日の記事です。
+前回はdelphinusさんによる[Neovim のターミナルでコマンドが完了したら通知する](https://qiita.com/delphinus/items/9c6599a5a13fe9088e10)でした。
 
 :::
 
