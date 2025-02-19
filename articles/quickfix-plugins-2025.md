@@ -82,8 +82,7 @@ Vimには`:vimgrep`と外部のgrepプログラムを利用する`:grep`があ�
 つまり`'grepprg'`と`'grepformat'`を`ripgrep`用に設定すれば良いです。
 
 Neovimは`ripgrep`がインストールされていればデフォルトで`'grepprg'`と`'grepformat'`を設定します。
-を`rg --vimgrep -uu`にします。
-ripgrepのオプションを変えたい場合、`'grepprg'`を変更すると良いです。
+この時`'grepprg'`は`rg --vimgrep -uu`と設定されるため、ripgrepのオプションを変えたい場合は`'grepprg'`を変更しましょう。
 私は`-uu`の部分を変えたり、`--smartcase`を付けています。
 
 Vimの場合は以下のように自分で設定する必要があります。
@@ -174,8 +173,8 @@ qfeditと同様に、不要な行を削除していきましょう。
 
 # `nvim-bqf`でquickfixのジャンプ先のpreviewを表示する
 
-quickfixの結果だけではなく、周辺コードも確認したことが多いです。
-`nvim-bqf`を利用するとpreviewが表示されます。
+quickfixの結果は、周辺コードと一緒に確認したいことがよくあります。
+`nvim-bqf`を利用するとpreviewを表示できます。
 
 https://github.com/kevinhwang91/nvim-bqf
 
@@ -183,11 +182,11 @@ https://github.com/kevinhwang91/nvim-bqf
 
 ![はじめてのnvim-bqf](https://github.com/user-attachments/assets/251ccb59-c0ea-4e6e-a1e2-3b6432e04152)
 
-grep結果の妥当性確認の際、実際にジャンプせずに判断できることも増えました。
+grep結果の妥当性確認の際、実際にジャンプせずに判断できます。
 `vim.diagnostic.setqflist()`で診断結果をquickfixで表示した際の見通しも良くなります。
 
 ただしデフォルトでいくつかマッピングするので注意が必要です。
-特に`quicker.nvim`と組合せる場合は`<C-v>`の矩形選択は良く使うので、私は以下のように無効化しています。
+特に`quicker.nvim`と組み合わせる場合は`<C-v>`の矩形選択を良く使うので、私は以下のように無効化しています。
 
 ```lua
 {
@@ -223,5 +222,5 @@ grep結果の妥当性確認の際、実際にジャンプせずに判断でき�
 LSの診断結果の閲覧についても以前から[trouble.nvim](https://github.com/folke/trouble.nvim)を使ってリッチに確認できました。
 今では`vim.diagnostic.setqflist()`と`nvim-bqf`の組み合わせも選択肢に入ると考えています。
 専用プラグインの能力も魅力的ですが、quickfixという共通IFを活用することで、プラグイン毎に操作方法を覚える必要が無いことも、また魅力と感じています。
-他に`vim.lsp.buf.references`もquickfixを使います。telescope.nvimなどに置き換えている人も是非一度quickfix + `nvim-bqf`の使い勝手を試してみて欲しいです。
+他に`vim.lsp.buf.references()`もquickfixを使います。telescope.nvimなどに置き換えている人も是非一度quickfix + `nvim-bqf`の使い勝手を試してみて欲しいです。
 referencesは同じ一覧を使って、様々な場所にジャンプするシーンがあります。ファジーファインダーのresume機能を使うより、quickfixでジャンプする方が快適な場面もあるのでお試しあれ。
