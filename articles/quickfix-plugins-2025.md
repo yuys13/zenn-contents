@@ -76,7 +76,7 @@ Vimには`:vimgrep`と外部のgrepプログラムを利用する`:grep`があ�
 
 ### `:grep`で`ripgrep`を使う
 
-`:grep`は`'grepprg`の値をgrepプログラムとして実行します。
+`:grep`は`'grepprg'`の値をgrepプログラムとして実行します。
 その結果を`'grepformat'`の値に従って解析します。
 
 つまり`'grepprg'`と`'grepformat'`を`ripgrep`用に設定すれば良いです。
@@ -108,7 +108,7 @@ Vimのオプションは`set`で設定可能ですが、スペースはエスケ
 ## quickfixの結果から除外したいものを消す(`vim-qfedit`編)
 
 quickfixは編集不可能なので、普通は消せません。
-しかし`vim-qfedit`を不要な行を消すことができます。
+しかし`vim-qfedit`を使うと不要な行を消すことができます。
 
 https://github.com/itchyny/vim-qfedit
 
@@ -138,7 +138,7 @@ https://github.com/thinca/vim-qfreplace
 
 ![qfreplaceで一括編集！](https://github.com/user-attachments/assets/e9223441-019f-4aff-b088-ff906d8f7cb8)
 
-これをpushすれば、私の全ての記事タイトルが「車アイコンによる、」から初まります。
+これをpushすれば、私の全ての記事タイトルが「車アイコンによる、」から始まります。
 ~~やりませんよ~~
 
 # `quicker.nvim`構成の場合(Neovimのみ)
@@ -218,7 +218,7 @@ grep結果の妥当性確認の際、実際にジャンプせずに判断でき�
 
 # さいごに
 
-昔からのVimmerにとってquickfixはお馴染の機能ですが、最近使い初めた人にも是非触ってみて欲しいです。
+昔からのVimmerにとってquickfixはお馴染みの機能ですが、最近使い始めた人にも是非触ってみて欲しいです。
 LSの診断結果の閲覧についても以前から[trouble.nvim](https://github.com/folke/trouble.nvim)を使ってリッチに確認できました。
 今では`vim.diagnostic.setqflist()`と`nvim-bqf`の組み合わせも選択肢に入ると考えています。
 専用プラグインの能力も魅力的ですが、quickfixという共通IFを活用することで、プラグイン毎に操作方法を覚える必要が無いことも、また魅力と感じています。
