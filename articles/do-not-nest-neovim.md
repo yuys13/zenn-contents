@@ -8,28 +8,26 @@ published_at: 2024-10-02
 publication_name: vim_jp
 ---
 
-<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
-
 :::message
+
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2024年10月2日の記事です。
 前回はthincaさんによる[Meguro.vim #25 を開催しました](https://thinca.hatenablog.com/entry/2024/09/megurovim-25)でした。
-:::
 
-<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
+:::
 
 # はじめに
 
-Noevimのターミナル便利ですよね。
+Neovimのターミナルは便利ですよね。
 しかし、うっかり`git commit`や`kubectl edit`などをしてしまい、Neovim内のTerminal内のNeovimが立ち上がり、上手くEscできないという状況に陥りませんか。
 私は陥りました。
 
-私が行なっている対策について共有します。
+私が行っている対策について共有します。
 
 # 動作イメージ
 
 ![demo](https://github.com/user-attachments/assets/0c4db65a-a911-4849-bdc4-64cafee242e1)
 
-`git commit`をすると新しいバッファが開く。通常のTerminal使用時と同じように、Neovim内のTerminalもバッファを閉じるまでブロックします。
+`git commit`をすると新しいバッファが開きます。通常のTerminal使用時と同じように、Neovim内のTerminalもバッファを閉じるまでブロックします。
 便利ですね。
 (バッファが開く位置はお好みにあわせて調整可能です)
 
@@ -90,9 +88,9 @@ if executable('nvr')
 endif
 ```
 
-`rightbelow`を付けると`split`や`vsplit`の位置を逆に出来るのですが、-ccのあとが複数の単語になってしまうので、ダブルクォートでくくるのがポイントです。
+`rightbelow`を付けると`split`や`vsplit`の位置を逆にできますが、-ccのあとが複数の単語になってしまうので、ダブルクォートでくくるのがポイントです。
 
-なお`tabnew`にしたい場合は専用のオプションがあるため、以下のように設定できます。こちらの方が通常のターミナルの挙動に近いかも知れませんね。
+なお`tabnew`にしたい場合は専用のオプションがあるため、以下のように設定できます。こちらの方が通常のターミナルの挙動に近いでしょうか。
 
 ```vim:init.vim
 if executable('nvr')
@@ -133,7 +131,7 @@ end
 # プラグインで解決する
 
 ここまでプラグインを使わない方法の説明をしてきましたが、いつのまにかプラグインが沢山出来ていました。
-以下の記事にまとまってます。
+以下の記事にまとまっています。
 
 https://zenn.dev/notomo/articles/neovim-plugin-to-avoid-nested
 
@@ -152,7 +150,7 @@ https://github.com/mhinz/neovim-remote/issues/169#issuecomment-1117067808
 ## Neovim本体の`--remote-wait`対応状況
 
 neovim-remoteは当初Neovimに実装されていなかった`:h client-server`を実現しています。
-のちほどNeovimに`--remote`は実装されたのですが、`--remote-wait`などは実装されませんでした。そのため「新しく開いたバッファを閉じるまでTerminalをブロックする」という動作が実現できていません。
+のちほどNeovimに`--remote`は実装されましたが、`--remote-wait`などは実装されませんでした。そのため「新しく開いたバッファを閉じるまでTerminalをブロックする」という動作が実現できていません。
 
 ところがNeovimでは`--remote-x-y`のようなオプションを整理しようという動きがあります。
 基本的には`--remote`に統一し、デフォルトでTerminalをブロックしようとしています。

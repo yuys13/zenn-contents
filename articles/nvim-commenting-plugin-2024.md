@@ -8,20 +8,18 @@ published_at: 2024-09-16
 publication_name: vim_jp
 ---
 
-<!-- textlint-disable ja-technical-writing/ja-no-mixed-period -->
-
 :::message
+
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2024年9月16日の記事です。
 前回はkawarimidollさんによる[Vimで使っている簡単キーマッピングたちを共有](https://zenn.dev/vim_jp/articles/43d021f461f3a4)でした。
-:::
 
-<!-- textlint-enable ja-technical-writing/ja-no-mixed-period -->
+:::
 
 # コメンティングプラグインとは
 
 この記事ではコメントアウト/アンコメントを手軽に実現するプラグインをコメンティングプラグインと呼びます。
 
-動いてる様子を見た方がわかりやすいので、[Reactでよく見たソースコード](https://github.com/facebook/create-react-app/blob/dd420a6d25d037decd7b81175626dfca817437ff/packages/cra-template-typescript/template/src/App.tsx)でのデモをご覧ください。
+動いている様子を見た方がわかりやすいので、[Reactでよく見かけるソースコード](https://github.com/facebook/create-react-app/blob/dd420a6d25d037decd7b81175626dfca817437ff/packages/cra-template-typescript/template/src/App.tsx)でのデモをご覧ください。
 
 ![demo](https://github.com/user-attachments/assets/e0ec4563-ccc7-478a-8944-80e72a23b7a8)
 
@@ -36,9 +34,9 @@ publication_name: vim_jp
 
 # 結論
 
-解説を初めると長くなるので、先に結論を書きます。
+解説を始めると長くなるので、先に結論を書きます。
 
-行コメントができれば十分な場合、Neovim組込みの機能(`:h commenting`)と[ts-comments.nvim](https://github.com/folke/ts-comments.nvim)を組み合わせて使うと良いでしょう。
+行コメントができれば十分な場合、Neovim組み込みの機能(`:h commenting`)と[ts-comments.nvim](https://github.com/folke/ts-comments.nvim)を組み合わせて使うと良いでしょう。
 
 ブロックコメントなど、より高度な機能が必要な場合は、[nvim-ts-context-commentstring](https://github.com/JoosepAlviste/nvim-ts-context-commentstring)と、対応しているコメンティングプラグイン([Comment.nvim](https://github.com/numToStr/Comment.nvim)など)を選びましょう。
 
@@ -62,7 +60,7 @@ https://github.com/yuys13/dotfiles/blob/7f414819fac660641f1e7ebd8c2b7d31f38c7e56
 [ts-comments](https://github.com/folke/ts-comments.nvim)をインストールして完成です。
 
 上記で満足できない場合、nvim-ts-context-commentstringの[Configuration](https://github.com/JoosepAlviste/nvim-ts-context-commentstring?tab=readme-ov-file#configuration)に挙げられているプラグインから選びましょう。
-私はプロジェクトによって行コメントとブロックコメントを使いわける必要があったので、[Comment.nvim](https://github.com/numToStr/Comment.nvim)を愛用しています。
+私はプロジェクトによって行コメントとブロックコメントを使い分ける必要があったので、[Comment.nvim](https://github.com/numToStr/Comment.nvim)を愛用しています。
 
 ## ts-comments.nvimとnvim-ts-context-commentstringの違い
 
@@ -73,4 +71,4 @@ ts-comments.nvimは`vim.filetype.get_option`という関数を上書きするこ
 デフォルトではautocmdによってcommentstringを更新します。
 このプラグインが真価を発揮するのはautocmdを無効化してコメンティングプラグインと組み合わせた時です。
 様々なコメンティングプラグインに対する連携機能が用意されており、コメンティングプラグインの豊富な機能と文脈によるcommentstringの変更を両立します。
-Neovim組込みのコメント機能との連携方法も記載されていますが、ts-comments.nvimの一部を自分で実装するのと同義なので、ts-comments.nvimを使う方が良いでしょう。
+Neovim組み込みのコメント機能との連携方法も記載されていますが、ts-comments.nvimの一部を自分で実装するのと同義なので、ts-comments.nvimを使う方が良いでしょう。

@@ -19,10 +19,10 @@ publication_name: vim_jp
 
 NeovimのDiagnosticはLanguage Serverの診断情報等を表示してくれる機能です。
 [none-ls](https://github.com/nvimtools/none-ls.nvim)や[nvim-lint](https://github.com/mfussenegger/nvim-lint)を使ってlinterの結果を表示している人も多いでしょう。
-そんな人達向けのTipsを紹介します。
+そんな人たち向けのTipsを紹介します。
 
 この記事のスクリーンショットはNeovim v0.10.2です。
-Neovim v0.10.3でも同様に使える事を確認しています。
+Neovim v0.10.3でも同様に使えることを確認しています。
 
 # 入り方
 
@@ -39,7 +39,7 @@ Neovim v0.10.3でも同様に使える事を確認しています。
 
 以下がfloating windowの中に入った時の様子です。
 
-![foating windowに入った様子](https://github.com/user-attachments/assets/4d03e85f-d925-40ec-924a-8379812ccbfe)
+![floating windowに入った様子](https://github.com/user-attachments/assets/4d03e85f-d925-40ec-924a-8379812ccbfe)
 
 この時、`vi[`を押すとどうなるでしょうか。  
 こうなります。
@@ -54,7 +54,7 @@ Neovim v0.10.3でも同様に使える事を確認しています。
 ```
 
 長い。
-長いですが、無効化するルールについてはfloating windowの中に入って`yi[`でコピーできるので、簡単に記載することが出来ます。
+長いですが、無効化するルールについてはfloating windowの中に入って`yi[`でコピーできるので、簡単に記載できます。
 
 Code Actionで無効化できると楽ですが、Code Actionが提供されていない場合も便利に無効化できます。
 
@@ -72,7 +72,7 @@ Code Actionで無効化できると楽ですが、Code Actionが提供されて�
 ## Diagnosticのfloating windowの表示をカスタマイズする
 
 `vim.diagnostic.config()`を使って表示方法をカスタマイズできます。  
-設定可能な項目は`:h vim.diagnostic.Opts`で調べる事ができます。
+設定可能な項目は`:h vim.diagnostic.Opts`で調べることができます。
 
 私は記事執筆時点で以下の設定をしています。
 
