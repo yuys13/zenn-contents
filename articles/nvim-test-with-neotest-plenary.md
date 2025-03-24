@@ -11,7 +11,7 @@ publication_name: vim_jp
 :::message
 
 本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2025年3月28日の記事です。
-前回はmikoto2000さんによる[Vim のマクロを使って気持ち良くなった話 - 表のデータを TS の enum にする]でした。
+前回はmikoto2000さんによる[Vim のマクロを使って気持ち良くなった話 - 表のデータを TS の enum にする](https://mikoto2000.blogspot.com/2025/03/vim-ts-enum.html)でした。
 
 :::
 
