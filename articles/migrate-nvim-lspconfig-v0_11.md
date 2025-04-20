@@ -3,7 +3,9 @@ title: "忙しい人向け nvim-lspconfigのnvim v0.11対応"
 emoji: "🚗"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [neovim, lsp]
-published: false
+published: true
+published_at: 2025-04-23
+publication_name: vim_jp
 ---
 
 :::message
