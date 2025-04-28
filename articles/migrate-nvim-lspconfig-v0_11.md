@@ -17,7 +17,7 @@ publication_name: vim_jp
 
 # はじめに
 
-Neovim 0.11でLSP周りに大きな変更が加わりました。
+Neovim v0.11でLSP周りに大きな変更が加わりました。
 
 - runtimepath内のlspフォルダにLanguage Serverの設定ファイルを置けるようになった
 - `vim.lsp.config`で設定を上書きできるようになった
@@ -107,6 +107,33 @@ vim.lsp.enable(require('mason-lspconfig').get_installed_servers())
 冒頭で紹介した[kawarimidollさんの記事](https://zenn.dev/kawarimidoll/articles/b202e546bca344)を参考に、自動で切り分けてください。
 もしくは`.nvim.lua`でプロジェクトごとに設定するのも良いでしょう。
 `.nvim.lua`については`:h exrc`でヘルプを参照してください。
+
+### Neovim v0.11.1の場合(2025年4月28日追記)
+
+Neovim v0.11.1から`workspace_required`という項目が[追加](https://github.com/neovim/neovim/pull/33608)されました。
+`workspace_required`を使用することで、`package.json`や`deno.json`が存在する場合のみ起動するように設定でき、自動的な切り分けが可能になります。
+
+```lua:.config/nvim/after/lsp/ts_ls.lua
+---@type vim.lsp.Config
+return {
+  root_markers = {
+    'package.json',
+  },
+  workspace_required = true,
+}
+```
+
+```lua:.config/nvim/after/lsp/deno.lua
+---@type vim.lsp.Config
+return {
+  root_markers = {
+    'deno.json',
+    'deno.jsonc',
+    'deps.ts',
+  },
+  workspace_required = true,
+}
+```
 
 # おわり
 
