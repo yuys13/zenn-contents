@@ -75,6 +75,7 @@ require'lspconfig'.language_server_name.setup {
 `setup`関数の引数を返却するファイルを作成します。場所は`.config/nvim/after/lsp/language_server_name.lua`です。
 
 ```lua:.config/nvim/after/lsp/language_server_name.lua
+---@type vim.lsp.Config
 return {
   settings = {
     awesome_setting = 'awesome'
