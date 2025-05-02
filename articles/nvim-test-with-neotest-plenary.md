@@ -48,8 +48,8 @@ dotfilesの便利関数のテストを書く場合は`.config/nvim/`に`test`フ
 `test`の中に`hello_spec.lua`を以下の内容で作成してみましょう。
 
 ```lua:hello_spec.lua
-describe("Hello", function()
-  it("Test", function()
+describe('Hello', function()
+  it('Test', function()
     assert.is_true(true)
   end)
 end)
