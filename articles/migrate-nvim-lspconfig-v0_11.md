@@ -65,10 +65,10 @@ Neovim本体の補完もLSPに対応したため、capabilitiesを更新しな�
 `language_server_name`の部分は`lua_ls`や`rust_analyzer`などに適宜読み替えてください。
 
 ```lua:init.lua
-require'lspconfig'.language_server_name.setup {
+require('lspconfig').language_server_name.setup {
   settings = {
-    awesome_setting = 'awesome'
-  }
+    awesome_setting = 'awesome',
+  },
 }
 ```
 
@@ -78,8 +78,8 @@ require'lspconfig'.language_server_name.setup {
 ---@type vim.lsp.Config
 return {
   settings = {
-    awesome_setting = 'awesome'
-  }
+    awesome_setting = 'awesome',
+  },
 }
 ```
 
