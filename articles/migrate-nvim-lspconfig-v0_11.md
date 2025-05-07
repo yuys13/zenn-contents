@@ -89,15 +89,28 @@ return {
 vim.lsp.enable('language_server_name')
 ```
 
-## mason-lspconfigのsetup_handlersで有効化していたLanguage Serverの書き換え
+## mason-lspconfigのsetup_handlersで有効化していたLanguage Serverの書き換え(2025年5月7日更新)
+
+mason-lspconfigのv2.0.0では`setup_handlers`が廃止されました。
+その代わり、MasonでインストールしたLanguage Serverが自動的に有効化されるようになりました。
+そのため、設定部分だけをこれまでの内容に従って書き換えれば動作します。
+
+有効化の詳細については以下をご確認ください(この記事の更新時点でのリンクです。必要に応じて最新版をご確認ください)。
+
+https://github.com/mason-org/mason-lspconfig.nvim/blob/d39a75bbce4b8aad5d627191ea915179c77c100f/README.md#automatically-enable-installed-servers
+
+:::details mason-lspconfig v1の場合(更新前の内容)。
 
 mason-lspconfigの`setup_handlers`関数で設定していた場合、設定部分はこれまでの記載内容で書き換えることが可能です。
 あとは有効化ができれば書き換え完了です。
+
 `vim.lsp.enable`はtableを受け取ることができるため、以下を追記してください。
 
 ```lua:init.lua
 vim.lsp.enable(require('mason-lspconfig').get_installed_servers())
 ```
+
+:::
 
 ## lazydev.nvimを使っているけど移行しても大丈夫か
 
