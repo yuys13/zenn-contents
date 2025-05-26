@@ -4,13 +4,18 @@
     "main": "index.js",
     "scripts": {
         "new": "zenn new:article --emoji 🚗",
-        "preview": "zenn preview"
+        "preview": "zenn preview",
+        "lint": "run-s lint:{prettier,markdownlint,textlint}",
+        "lint:markdownlint": "markdownlint -i node_modules '**/*.md'",
+        "lint:prettier": "prettier --check '**/*.md'",
+        "lint:textlint": "textlint '**/*.md'"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "description": "",
     "dependencies": {
+        "npm-run-all": "^4.1.5",
         "zenn-cli": "^0.1.159"
     },
     "devDependencies": {
