@@ -19,7 +19,7 @@
         "zenn-cli": "^0.2.10"
     },
     "devDependencies": {
-        "markdownlint-cli": "^0.45.0",
+        "markdownlint-cli": "^0.46.0",
         "prettier": "^3.6.2",
         "textlint": "^15.4.0",
         "textlint-filter-rule-comments": "^1.2.2",
