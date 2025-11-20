@@ -142,7 +142,7 @@ futsuuuさん、あらためてありがとうございました。
 
 <!-- textlint-disable ja-technical-writing/no-exclamation-question-mark -->
 
-https://zenn.dev/hrsh7th/articles/62574bf9aba252#lt%3A-test-your-init.lua-%26-lua-plugins!
+<https://zenn.dev/hrsh7th/articles/62574bf9aba252#lt%3A-test-your-init.lua-%26-lua-plugins!>
 
 <!-- textlint-enable ja-technical-writing/no-exclamation-question-mark -->
 
