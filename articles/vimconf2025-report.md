@@ -6,6 +6,13 @@ topics: [vim, neovim, vimconf]
 published: true
 ---
 
+:::message
+
+本記事は[Vim駅伝](https://vim-jp.org/ekiden/)2025年11月21日の記事です。
+前回はuma-chanさんによる[Vim と tmux で複数の AI エージェントを操作する](https://i9wa4.github.io/blog/2025-11-19-vim-tmux-orchestrating-ai-coding-agents)でした。
+
+:::
+
 # はじめに
 
 VimConf 2025 Smallで`Test Your init.lua & Lua Plugins!`というタイトルでLightning Talkしてきました。
