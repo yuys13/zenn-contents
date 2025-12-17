@@ -118,6 +118,14 @@ vim.lsp.enable(require('mason-lspconfig').get_installed_servers())
 
 ## nodeとdenoを自動で切り分けて起動したい
 
+### 2025年12月17日追記
+
+以下のPRがマージされたことで、設定不要でnodeとdenoが自動で判断されるようになりました。
+
+https://github.com/neovim/nvim-lspconfig/pull/4207
+
+:::details 以前記載していた内容。
+
 冒頭で紹介した[kawarimidollさんの記事](https://zenn.dev/kawarimidoll/articles/b202e546bca344)を参考に、自動で切り分けてください。
 もしくは`.nvim.lua`でプロジェクトごとに設定するのも良いでしょう。
 `.nvim.lua`については`:h exrc`でヘルプを参照してください。
@@ -148,6 +156,8 @@ return {
   workspace_required = true,
 }
 ```
+
+:::
 
 # おわり
 
