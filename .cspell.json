@@ -3,6 +3,7 @@
   "version": "0.2",
   "language": "en",
   "words": [
+    "asyncomplete",
     "autocmd",
     "autols",
     "bindkey",
@@ -13,10 +14,12 @@
     "collama",
     "commentstring",
     "copen",
+    "deoplete",
     "exrc",
     "extendedglob",
     "filehandler",
     "fnamemodify",
+    "fpath",
     "getinfo",
     "grepformat",
     "grepprg",
@@ -64,6 +67,8 @@
     "wezterm",
     "yuys",
     "Zenn",
+    "zpty",
+    "zshcs",
     "zstyle"
   ]
 }
