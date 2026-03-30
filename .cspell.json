@@ -9,6 +9,8 @@
     "bindkey",
     "bobthefish",
     "bufhidden",
+    "bufnr",
+    "checkhealth",
     "chpwd",
     "codellama",
     "collama",
