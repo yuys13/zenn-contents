@@ -1,7 +1,18 @@
 {
     "name": "zenn-contents",
     "version": "1.0.0",
-    "packageManager": "pnpm@11.6.0",
+    "devEngines": {
+        "runtime": {
+            "name": "node",
+            "version": "^24.11.0",
+            "onFail": "download"
+        },
+        "packageManager": {
+            "name": "pnpm",
+            "version": "11.8.0",
+            "onFail": "download"
+        }
+    },
     "main": "index.js",
     "scripts": {
         "new": "zenn new:article --emoji 🚗",
