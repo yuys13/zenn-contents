@@ -1,7 +1,7 @@
 {
     "name": "zenn-contents",
     "version": "1.0.0",
-    "packageManager": "pnpm@11.10.0",
+    "packageManager": "pnpm@11.15.1",
     "main": "index.js",
     "scripts": {
         "new": "zenn new:article --emoji 🚗",
