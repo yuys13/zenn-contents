@@ -1,7 +1,7 @@
 {
     "name": "zenn-contents",
     "version": "1.0.0",
-    "packageManager": "pnpm@11.20.0",
+    "packageManager": "pnpm@11.25.0",
     "main": "index.js",
     "scripts": {
         "new": "zenn new:article --emoji 🚗",
@@ -16,7 +16,7 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
-        "zenn-cli": "^0.5.2"
+        "zenn-cli": "^0.5.3"
     },
     "devDependencies": {
         "markdownlint-cli2": "^0.23.2",
